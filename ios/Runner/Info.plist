@@ -45,5 +45,12 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+        <string>應用需要使用藍牙來掃描與連接裝置。</string>
+        <key>NSBluetoothPeripheralUsageDescription</key>
+        <string>應用需要使用藍牙來掃描與連接裝置。</string>
+        <!-- 如果需要定位權限，也一併加入說明 -->
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>應用需要存取位置以搜尋附近的藍牙裝置。</string>
 </dict>
 </plist>
