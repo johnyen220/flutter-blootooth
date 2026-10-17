@@ -1,4 +1,4 @@
-# flutter-blootooth
+# flutter-bluetooth
 
 A simple Flutter Bluetooth example using [`flutter_blue_plus`](https://pub.dev/packages/flutter_blue_plus).
 
@@ -134,5 +134,22 @@ class _BluetoothExamplePageState extends State<BluetoothExamplePage> {
 
 ## 3) Platform permissions
 
-Bluetooth permissions differ by Android and iOS version. Add the required
-Bluetooth permissions in your AndroidManifest and Info.plist before running.
+Bluetooth permissions differ by OS version.
+
+### Android (`android/app/src/main/AndroidManifest.xml`)
+
+```xml
+<!-- Android 12+ -->
+<uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+<!-- Android 11 and below -->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+
+### iOS (`ios/Runner/Info.plist`)
+
+```xml
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>This app needs Bluetooth to scan and connect to devices.</string>
+```
