@@ -142,7 +142,7 @@ Bluetooth permissions differ by OS version.
 <!-- Android 12+ -->
 <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
 <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-<!-- Needed unless BLUETOOTH_SCAN uses android:usesPermissionFlags="neverForLocation" -->
+<!-- Needed unless BLUETOOTH_SCAN is declared with android:usesPermissionFlags="neverForLocation" -->
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 <!-- Android 11 and below -->
@@ -156,7 +156,7 @@ Bluetooth permissions differ by OS version.
 ```xml
 <key>NSBluetoothAlwaysUsageDescription</key>
 <string>This app needs Bluetooth to scan and connect to devices.</string>
-<!-- iOS 12 and below -->
+<!-- Deprecated in iOS 13; required for iOS 12 and below -->
 <key>NSBluetoothPeripheralUsageDescription</key>
 <string>This app needs Bluetooth to scan and connect to devices.</string>
 ```
