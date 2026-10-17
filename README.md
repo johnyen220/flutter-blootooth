@@ -144,6 +144,8 @@ Bluetooth permissions differ by OS version.
 <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
 <!-- Android 11 and below -->
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
@@ -151,5 +153,7 @@ Bluetooth permissions differ by OS version.
 
 ```xml
 <key>NSBluetoothAlwaysUsageDescription</key>
+<string>This app needs Bluetooth to scan and connect to devices.</string>
+<key>NSBluetoothPeripheralUsageDescription</key>
 <string>This app needs Bluetooth to scan and connect to devices.</string>
 ```
